@@ -1,5 +1,5 @@
 import React from 'react';
-
+  
 const Paginate = ({len,itemsperpage,changePageNo}) => {
 
     const noPages =[];
@@ -9,19 +9,19 @@ const Paginate = ({len,itemsperpage,changePageNo}) => {
     }
 
     return(
-        <nav >
-            <ul className="pagination"  style={{position:"relative",left:"38%"}}>
+        
+        <div  >
+                <ul className="pagination"  >
                 {noPages.map(number=>(
-                    <li key={number} className="page-item">
-                        <a  onClick={()=>changePageNo(number)} href="#" className="page-link">{number}</a>
+                    <li key={number} className="page-item" >
+                        <a style={{color:"black"}} onClick={()=>changePageNo(number)} href="#" className="page-link">{number}</a>
                     </li>
-                ))}
-            </ul>
-        </nav>
+                  ))}
+                  </ul>
+        </div>
         
     );
-
-
+ 
 }
 
 export default Paginate

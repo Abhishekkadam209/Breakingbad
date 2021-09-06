@@ -1,6 +1,6 @@
 import React,{useState ,useEffect} from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
   
 const Details = ( props ) => {
 
@@ -25,7 +25,7 @@ const Details = ( props ) => {
 
     useEffect(()=>{
 
-        console.log("in loop");
+        
         if(!info)
         fetchCharacters();
 
@@ -48,19 +48,15 @@ const Details = ( props ) => {
         return(
 
              <div   style={{background:" #f9ecf9"}} >
-                 <nav style={{height:"50px"}}>
-                     <Link to="/home" style={{textDecoration:"none",position:"relative",left:"45%",top:"30%" }}>
-                            <button  type="button" className="btn btn-secondary">Home</button>
-                     </Link>
-                 </nav>
+                 
 
                 <div className="container">
-                    <div className="row justify-content-around" style={{marginTop:"30px",marginBottom:"30px"}}>
+                    <div className="row justify-content-around" style={{ marginBottom:"30px"}}>
 
-                            <div className="col-md-4">
+                            <div className="col-md-4" style={{ marginTop:"30px"}}>
                                     <img src={info.img}  width="100%" />
                             </div>
-                            <div className="col-md-6">
+                            <div className="col-md-6" style={{ marginTop:"30px"}}>
                                 
                                 <h1> Name : {info.name}</h1>
                                 <br></br>
@@ -96,12 +92,7 @@ const Details = ( props ) => {
                     </div>
 
                 </div>
-
-                <nav style={{height:"100px"}}>
-                     <Link to="/home" style={{textDecoration:"none",position:"relative",left:"45%",top:"30%" }}>
-                            <button  type="button" className="btn btn-secondary">Home</button>
-                     </Link>
-                 </nav>
+ 
 
              </div>
           
